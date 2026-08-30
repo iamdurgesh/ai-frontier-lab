@@ -1,2 +1,3 @@
 # ai-frontier-lab
-A hands-on laboratory for modern AI engineering — agents, RAG, MCP, A2A, open models, inference, evals, automation, coding agents, multimodal AI, and emerging technologies.
+A hands-on AI engineering lab for mastering modern RAG, agents, MCP/A2A, multi-agent systems, evals, open models, inference, automation, coding agents, and emerging AI technologies through practical experiments and benchmarks.
+
