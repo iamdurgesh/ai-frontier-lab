@@ -1,0 +1,40 @@
+name: Technology review
+description: Propose a scoped investigation with evidence gates.
+title: "[technology-review] "
+body:
+  - type: textarea
+    id: field-0
+    attributes:
+      label: Technology and problem
+    validations:
+      required: true
+  - type: textarea
+    id: field-1
+    attributes:
+      label: Primary source and review date
+    validations:
+      required: true
+  - type: textarea
+    id: field-2
+    attributes:
+      label: Current alternative
+    validations:
+      required: true
+  - type: textarea
+    id: field-3
+    attributes:
+      label: Proposed comparison and evidence
+    validations:
+      required: true
+  - type: textarea
+    id: field-4
+    attributes:
+      label: Licensing, security and cost
+    validations:
+      required: true
+  - type: textarea
+    id: field-5
+    attributes:
+      label: Decision and revisit trigger
+    validations:
+      required: true
