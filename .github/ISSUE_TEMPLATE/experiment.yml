@@ -1,0 +1,46 @@
+name: Experiment proposal
+description: Propose a scoped investigation with evidence gates.
+title: "[experiment] "
+body:
+  - type: textarea
+    id: field-0
+    attributes:
+      label: Question and principle
+    validations:
+      required: true
+  - type: textarea
+    id: field-1
+    attributes:
+      label: Hypothesis and baseline
+    validations:
+      required: true
+  - type: textarea
+    id: field-2
+    attributes:
+      label: Intended use and decision
+    validations:
+      required: true
+  - type: textarea
+    id: field-3
+    attributes:
+      label: Data provenance and evaluation method
+    validations:
+      required: true
+  - type: textarea
+    id: field-4
+    attributes:
+      label: Metrics and completion evidence
+    validations:
+      required: true
+  - type: textarea
+    id: field-5
+    attributes:
+      label: Time, tokens, spending and stop conditions
+    validations:
+      required: true
+  - type: textarea
+    id: field-6
+    attributes:
+      label: Security, privacy and permitted actions
+    validations:
+      required: true
