@@ -1,6 +1,6 @@
 # AI Frontier Lab — Repository Architecture
 
-Status: design contract for creator-agent bootstrap; no runtime implementation is claimed.
+Status: maintained architecture and learning contract. Bootstrap tooling exists locally; the project systems and distributed reasoning framework remain planned. File presence, Git inclusion, and successful validation are separate checks.
 
 ## Purpose and learning strategy
 
@@ -15,6 +15,12 @@ Become an engineer who can turn unfamiliar AI capabilities into useful products 
 These are learning categories, not three sequential stages. The separate ADOPT / TRIAL / ASSESS / HOLD / IGNORE lifecycle records technology decisions.
 
 Use one repository initially. A new tool does not warrant a new repository or a new project. Experiments answer questions; projects integrate capabilities into useful systems. Dependency isolation does not require repository separation.
+
+## Core working principles
+
+Use the [README working principles](README.md#working-principles) as the concise operating guide. The architecture below turns them into dependency boundaries, experiment contracts, and evidence gates. DRY and KISS guide implementation; shared abstractions must earn their place through actual reuse.
+
+Learning success means being able to explain, implement, evaluate, diagnose, and deliberately change a system. Product success means demonstrating useful behavior for a defined task under explicit reliability, permission, resource, and cost constraints. Neither is established by generated code or a successful demo alone.
 
 ## Bootstrap creation checklist
 
@@ -140,6 +146,19 @@ The four projects are planned integration destinations, not four simultaneous co
 
 Intended capability: execute bounded reasoning tasks across workers, allow controlled recursive delegation, integrate tools through MCP and remote agents through A2A, and recover predictably from failures. This is a design direction to validate, not a claim that multi-agent reasoning is better by default.
 
+### Evidence required for an advance
+
+A breakthrough is an ambition to investigate, not a promised result or current capability. Before claiming an advance:
+
+1. Define the useful task, intended users, existing limitation, and falsifiable improvement hypothesis. Set success criteria and finite budgets before measuring.
+2. Implement and evaluate a credible fixed-workflow baseline and, where relevant, a single-agent baseline on the same held-out tasks and comparable resource budgets.
+3. Test the proposed mechanism separately. Use ablations where applicable: remove recursion, extra workers, or another component to determine what contributes to the result.
+4. Repeat measurements, record uncertainty and failures, and report quality, reliability, latency, cost, and operational complexity together. Include regressions and negative results.
+5. Supply reproducible code, configuration, environment, data provenance, and sanitized evidence so another run can check the conclusion. Verify bounded work, permissions, recovery, and duplicate-side-effect handling.
+6. Distinguish an improvement on this task from general superiority or research novelty. Novelty claims require a documented comparison with relevant prior work and explicit limitations.
+
+If the simpler baseline performs better for the task, keep it and record what was learned. Choose the next investigation from an observed limitation. Do not expand the framework merely to add components.
+
 ### Logical responsibilities
 
 | Component | Responsibility and boundary |
@@ -190,8 +209,8 @@ Security, privacy, evaluation, observability, and cost control begin with the fi
 
 ## Creator-agent handoff
 
-Assignment:
+Historical bootstrap scope (applies when bootstrapping; subsequent work follows the current assignment):
 
 > Read the root README and ARCHITECTURE.md, plus the local creator specification when available. Bootstrap only the architecture's creation checklist. Preserve existing owner instructions and work. Implement the minimal package, experiment generator, offline tests, and CI; create concise indexes and templates. Record future projects and principles in the roadmap without implementing them or creating their future directory trees. Validate the bootstrap commands and generator behavior. Report created files, checks performed, failures, and remaining manual setup honestly. Do not start an AI experiment, install service stacks, or call paid models.
 
-Bootstrap is complete when the documented setup works without cloud credentials, tests/lint pass, a temporary experiment can be generated safely, and a reader can distinguish current implementation from planned architecture. The first proposed learning experiment remains a retrieval baseline; its execution requires a subsequent assignment.
+Local bootstrap readiness requires that the documented setup works without cloud credentials, tests/lint pass, a temporary experiment can be generated safely, and a reader can distinguish current implementation from planned architecture. Repository handoff additionally requires every necessary bootstrap file to be committed and the setup checked from a clean checkout; report remote CI separately from local checks. Publishing changes requires explicit owner confirmation before any push. The first proposed learning experiment remains a retrieval baseline; its execution requires a subsequent assignment.
