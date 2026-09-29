@@ -1,6 +1,6 @@
 # Experiments
 
-No experiments have run yet. Each experiment asks one primary question with a meaningful baseline, bounded resources, licensed evaluation data, reproducible method, and honest results.
+The first [lexical retrieval diagnostic](2026-09-lexical-retrieval-baseline/README.md) has run on a synthetic teaching fixture. Owner understanding review is pending. Each experiment asks one primary question with a meaningful baseline, bounded resources, licensed evaluation data, reproducible method, and honest results.
 
 From the root run `uv run python scripts/new_experiment.py topic` to create `YYYY-MM-topic`. Only lowercase letters, digits and single hyphens are accepted, up to 80 characters. Existing files, directories and symlinks are refused. A write failure may leave a partial directory; inspect it manually before retrying, since it will never be overwritten.
 
