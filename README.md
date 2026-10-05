@@ -6,7 +6,7 @@ A hands-on AI engineering lab for learning to turn unfamiliar AI capabilities in
 
 This single repository will connect focused experiments, evidence-backed technology decisions, and integrated projects—including a progressive distributed recursive multi-agent reasoning framework with MCP/A2A support.
 
-Status: active learning/engineering lab with initial bootstrap tooling. No experiments or framework implementation are complete yet. Experiments will vary in maturity.
+Status: active learning/engineering lab with initial bootstrap tooling. The first offline lexical-retrieval diagnostic has measured results; owner understanding review is pending. No integrated project or reasoning framework is implemented. Experiments will vary in maturity.
 
 - [Repository architecture](ARCHITECTURE.md): bootstrap tree, module boundaries, growth map, and framework progression.
 
@@ -74,4 +74,8 @@ See [roadmap](ROADMAP.md), [skills evidence](SKILLS.md), [technology decisions](
 uv run python scripts/new_experiment.py hybrid-search-baseline
 ```
 
-This creates `experiments/YYYY-MM-hybrid-search-baseline/` with planned, unmeasured documents. It does not execute an experiment. Fill in the hypothesis, baseline, evaluation data, budgets, and permitted actions before adding implementation. The first proposed assignment is a retrieval baseline.
+This creates `experiments/YYYY-MM-hybrid-search-baseline/` with planned, unmeasured documents. It does not execute an experiment. Fill in the hypothesis, baseline, evaluation data, budgets, and permitted actions before adding implementation. The active lexical baseline is linked below; create a new experiment only for a new question.
+
+## Active experiment
+
+[Lexical retrieval baseline](experiments/2026-09-lexical-retrieval-baseline/README.md): compare word overlap, BM25, and a length-normalization ablation on a small synthetic diagnostic. [Measured results](experiments/2026-09-lexical-retrieval-baseline/RESULTS.md) show the expected vocabulary-mismatch failures; they do not establish general retrieval quality. Next: work through the understanding check before broadening the dataset.
