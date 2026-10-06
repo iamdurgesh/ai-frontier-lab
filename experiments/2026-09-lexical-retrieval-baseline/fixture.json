@@ -1,0 +1,135 @@
+{
+  "provenance": "AI-authored synthetic English teaching fixture, 2026-09-29; no external text copied; repository MIT license. Corpus and labels co-designed: diagnostic only, not held-out evidence.",
+  "documents": [
+    {
+      "id": "checkpoint",
+      "text": "A checkpoint saves task state. A worker can resume a failed task from saved state."
+    },
+    {
+      "id": "retry",
+      "text": "A retry repeats a failed request. Use a finite retry limit and backoff."
+    },
+    {
+      "id": "permissions",
+      "text": "Tool permissions restrict allowed actions. A write action requires explicit approval."
+    },
+    {
+      "id": "retrieval",
+      "text": "Retrieval ranks documents for a query. Lexical search matches words in the query."
+    },
+    {
+      "id": "budget",
+      "text": "A token budget limits model usage. Stop execution when the budget is exhausted."
+    },
+    {
+      "id": "cancellation",
+      "text": "Cancellation asks a running task to stop. External actions already in flight may finish."
+    },
+    {
+      "id": "deduplication",
+      "text": "An idempotency key identifies a request. Deduplication prevents repeating its side effect."
+    },
+    {
+      "id": "tracing",
+      "text": "Tracing records task events and timing. Do not record secrets or submitted payloads."
+    }
+  ],
+  "queries": [
+    {
+      "id": "q1",
+      "text": "checkpoint saved state",
+      "relevant": [
+        "checkpoint"
+      ],
+      "category": "lexical"
+    },
+    {
+      "id": "q2",
+      "text": "retry failed request",
+      "relevant": [
+        "retry"
+      ],
+      "category": "lexical"
+    },
+    {
+      "id": "q3",
+      "text": "write action approval",
+      "relevant": [
+        "permissions"
+      ],
+      "category": "lexical"
+    },
+    {
+      "id": "q4",
+      "text": "query lexical search",
+      "relevant": [
+        "retrieval"
+      ],
+      "category": "lexical"
+    },
+    {
+      "id": "q5",
+      "text": "token budget",
+      "relevant": [
+        "budget"
+      ],
+      "category": "lexical"
+    },
+    {
+      "id": "q6",
+      "text": "cancellation running task",
+      "relevant": [
+        "cancellation"
+      ],
+      "category": "lexical"
+    },
+    {
+      "id": "q7",
+      "text": "idempotency key",
+      "relevant": [
+        "deduplication"
+      ],
+      "category": "lexical"
+    },
+    {
+      "id": "q8",
+      "text": "tracing events timing",
+      "relevant": [
+        "tracing"
+      ],
+      "category": "lexical"
+    },
+    {
+      "id": "q9",
+      "text": "restore progress after crash",
+      "relevant": [
+        "checkpoint"
+      ],
+      "category": "paraphrase"
+    },
+    {
+      "id": "q10",
+      "text": "avoid duplicate purchases",
+      "relevant": [
+        "deduplication"
+      ],
+      "category": "paraphrase"
+    },
+    {
+      "id": "q11",
+      "text": "cap expenditure",
+      "relevant": [
+        "budget"
+      ],
+      "category": "paraphrase"
+    },
+    {
+      "id": "q12",
+      "text": "halt ongoing work",
+      "relevant": [
+        "cancellation"
+      ],
+      "category": "paraphrase"
+    }
+  ]
+}

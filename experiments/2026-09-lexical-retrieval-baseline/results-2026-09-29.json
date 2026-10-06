@@ -1,0 +1,1454 @@
+{
+  "created_at_utc": "2026-09-29T21:12:09.817319+00:00",
+  "base_commit": "ce206847a3a9534261a6c458a4dd0beb2941ff5e",
+  "source_note": "Working-tree source identified by hashes; base commit may not contain it.",
+  "sha256": {
+    "retrieval.py": "da9cab1dd03d6cf0a98660c9384050966edcfbed809fa31c911aa1cbf03e5ccb",
+    "run.py": "f7d0af38d03762c9349a1e7aadcf441a61d6af7f76c470d2a4be9c22f17bf5a6",
+    "fixture.json": "6ee041ab167435f4df207c6ce63eb263f6e75b53f86af343f5d34c88122b08bd"
+  },
+  "environment": {
+    "python": "3.12.7",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "runtime_dependencies": "standard library"
+  },
+  "methodology": {
+    "repeats": 20,
+    "warmup_per_query": 1,
+    "concurrency": 1,
+    "timing_scope": "search only; excludes index build and file IO",
+    "quality_repetitions": "identical deterministic rankings, not independent samples",
+    "limitations": "co-designed synthetic diagnostic, no held-out generalization"
+  },
+  "api_requests": 0,
+  "api_cost_eur": 0,
+  "compute_cost": "not measured",
+  "results": {
+    "overlap": {
+      "configuration": {
+        "method": "overlap",
+        "k": 3,
+        "k1": 1.2,
+        "b": 0.75
+      },
+      "summary": {
+        "all": {
+          "queries": 12,
+          "recall_at_3": 0.6666666666666666,
+          "mrr_at_3": 0.6666666666666666
+        },
+        "lexical": {
+          "queries": 8,
+          "recall_at_3": 1.0,
+          "mrr_at_3": 1.0
+        },
+        "paraphrase": {
+          "queries": 4,
+          "recall_at_3": 0.0,
+          "mrr_at_3": 0.0
+        }
+      },
+      "queries": [
+        {
+          "id": "q1",
+          "category": "lexical",
+          "query": "checkpoint saved state",
+          "relevant": [
+            "checkpoint"
+          ],
+          "ranked": [
+            "checkpoint"
+          ],
+          "scores": [
+            3.0
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "latency_ms_runs": [
+            0.005791,
+            0.004417,
+            0.003792,
+            0.003584,
+            0.0035,
+            0.003709,
+            0.003375,
+            0.003292,
+            0.003291,
+            0.003583,
+            0.003458,
+            0.003375,
+            0.003292,
+            0.003333,
+            0.003417,
+            0.003375,
+            0.003375,
+            0.003334,
+            0.003416,
+            0.003417
+          ]
+        },
+        {
+          "id": "q2",
+          "category": "lexical",
+          "query": "retry failed request",
+          "relevant": [
+            "retry"
+          ],
+          "ranked": [
+            "retry",
+            "checkpoint",
+            "deduplication"
+          ],
+          "scores": [
+            3.0,
+            1.0,
+            1.0
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "latency_ms_runs": [
+            0.004041,
+            0.003667,
+            0.003542,
+            0.0035,
+            0.003458,
+            0.003416,
+            0.003542,
+            0.003542,
+            0.003584,
+            0.003417,
+            0.003541,
+            0.0035,
+            0.003458,
+            0.003417,
+            0.003417,
+            0.003416,
+            0.003417,
+            0.003458,
+            0.0035,
+            0.003375
+          ]
+        },
+        {
+          "id": "q3",
+          "category": "lexical",
+          "query": "write action approval",
+          "relevant": [
+            "permissions"
+          ],
+          "ranked": [
+            "permissions"
+          ],
+          "scores": [
+            3.0
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "latency_ms_runs": [
+            0.003417,
+            0.003458,
+            0.00325,
+            0.003334,
+            0.003291,
+            0.003333,
+            0.003292,
+            0.003209,
+            0.00325,
+            0.003167,
+            0.003292,
+            0.003291,
+            0.003334,
+            0.00325,
+            0.003291,
+            0.003292,
+            0.003292,
+            0.003333,
+            0.00325,
+            0.003292
+          ]
+        },
+        {
+          "id": "q4",
+          "category": "lexical",
+          "query": "query lexical search",
+          "relevant": [
+            "retrieval"
+          ],
+          "ranked": [
+            "retrieval"
+          ],
+          "scores": [
+            3.0
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "latency_ms_runs": [
+            0.003542,
+            0.003542,
+            0.003417,
+            0.003291,
+            0.00325,
+            0.003334,
+            0.003292,
+            0.00325,
+            0.003333,
+            0.00325,
+            0.003292,
+            0.00325,
+            0.003333,
+            0.003292,
+            0.003292,
+            0.00325,
+            0.003291,
+            0.00325,
+            0.00325,
+            0.003292
+          ]
+        },
+        {
+          "id": "q5",
+          "category": "lexical",
+          "query": "token budget",
+          "relevant": [
+            "budget"
+          ],
+          "ranked": [
+            "budget"
+          ],
+          "scores": [
+            2.0
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "latency_ms_runs": [
+            0.002916,
+            0.002792,
+            0.002791,
+            0.002709,
+            0.002667,
+            0.002625,
+            0.002584,
+            0.002584,
+            0.002666,
+            0.002667,
+            0.002625,
+            0.002666,
+            0.002584,
+            0.002625,
+            0.002709,
+            0.002666,
+            0.002667,
+            0.002625,
+            0.002667,
+            0.002625
+          ]
+        },
+        {
+          "id": "q6",
+          "category": "lexical",
+          "query": "cancellation running task",
+          "relevant": [
+            "cancellation"
+          ],
+          "ranked": [
+            "cancellation",
+            "checkpoint",
+            "tracing"
+          ],
+          "scores": [
+            3.0,
+            1.0,
+            1.0
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "latency_ms_runs": [
+            0.003875,
+            0.003541,
+            0.003583,
+            0.003541,
+            0.0035,
+            0.0035,
+            0.003542,
+            0.0035,
+            0.003458,
+            0.003458,
+            0.003458,
+            0.003458,
+            0.0035,
+            0.003458,
+            0.004416,
+            0.006666,
+            0.006667,
+            0.00675,
+            0.006916,
+            0.006792
+          ]
+        },
+        {
+          "id": "q7",
+          "category": "lexical",
+          "query": "idempotency key",
+          "relevant": [
+            "deduplication"
+          ],
+          "ranked": [
+            "deduplication"
+          ],
+          "scores": [
+            2.0
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "latency_ms_runs": [
+            0.005875,
+            0.005541,
+            0.005417,
+            0.005125,
+            0.005334,
+            0.00525,
+            0.005209,
+            0.005209,
+            0.005208,
+            0.005292,
+            0.005125,
+            0.005292,
+            0.005208,
+            0.00525,
+            0.005167,
+            0.005292,
+            0.005375,
+            0.00525,
+            0.005333,
+            0.006292
+          ]
+        },
+        {
+          "id": "q8",
+          "category": "lexical",
+          "query": "tracing events timing",
+          "relevant": [
+            "tracing"
+          ],
+          "ranked": [
+            "tracing"
+          ],
+          "scores": [
+            3.0
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "latency_ms_runs": [
+            0.007375,
+            0.007,
+            0.006416,
+            0.00625,
+            0.006542,
+            0.006292,
+            0.006792,
+            0.006542,
+            0.006625,
+            0.0065,
+            0.006583,
+            0.006375,
+            0.006583,
+            0.006666,
+            0.0065,
+            0.006292,
+            0.006583,
+            0.006417,
+            0.006417,
+            0.006208
+          ]
+        },
+        {
+          "id": "q9",
+          "category": "paraphrase",
+          "query": "restore progress after crash",
+          "relevant": [
+            "checkpoint"
+          ],
+          "ranked": [],
+          "scores": [],
+          "recall_at_k": 0.0,
+          "reciprocal_rank_at_k": 0.0,
+          "latency_ms_runs": [
+            0.008125,
+            0.007875,
+            0.007792,
+            0.007541,
+            0.007625,
+            0.007584,
+            0.007459,
+            0.007625,
+            0.0075,
+            0.007625,
+            0.007667,
+            0.00775,
+            0.0075,
+            0.007542,
+            0.007375,
+            0.00775,
+            0.007584,
+            0.007542,
+            0.007667,
+            0.007542
+          ]
+        },
+        {
+          "id": "q10",
+          "category": "paraphrase",
+          "query": "avoid duplicate purchases",
+          "relevant": [
+            "deduplication"
+          ],
+          "ranked": [],
+          "scores": [],
+          "recall_at_k": 0.0,
+          "reciprocal_rank_at_k": 0.0,
+          "latency_ms_runs": [
+            0.006833,
+            0.00675,
+            0.006583,
+            0.006334,
+            0.006541,
+            0.0065,
+            0.0065,
+            0.006458,
+            0.006542,
+            0.006375,
+            0.0065,
+            0.006416,
+            0.0065,
+            0.006417,
+            0.006458,
+            0.006292,
+            0.006458,
+            0.006542,
+            0.006459,
+            0.006375
+          ]
+        },
+        {
+          "id": "q11",
+          "category": "paraphrase",
+          "query": "cap expenditure",
+          "relevant": [
+            "budget"
+          ],
+          "ranked": [],
+          "scores": [],
+          "recall_at_k": 0.0,
+          "reciprocal_rank_at_k": 0.0,
+          "latency_ms_runs": [
+            0.005625,
+            0.005541,
+            0.005334,
+            0.005125,
+            0.005125,
+            0.00525,
+            0.005209,
+            0.00525,
+            0.005166,
+            0.005209,
+            0.00525,
+            0.005083,
+            0.005042,
+            0.005083,
+            0.005208,
+            0.005166,
+            0.00525,
+            0.005292,
+            0.005167,
+            0.00525
+          ]
+        },
+        {
+          "id": "q12",
+          "category": "paraphrase",
+          "query": "halt ongoing work",
+          "relevant": [
+            "cancellation"
+          ],
+          "ranked": [],
+          "scores": [],
+          "recall_at_k": 0.0,
+          "reciprocal_rank_at_k": 0.0,
+          "latency_ms_runs": [
+            0.007,
+            0.006625,
+            0.0065,
+            0.006333,
+            0.006292,
+            0.006333,
+            0.006375,
+            0.006375,
+            0.006334,
+            0.006334,
+            0.006375,
+            0.006417,
+            0.006416,
+            0.006459,
+            0.006375,
+            0.006375,
+            0.006334,
+            0.006417,
+            0.006292,
+            0.006417
+          ]
+        }
+      ]
+    },
+    "bm25": {
+      "configuration": {
+        "method": "bm25",
+        "k": 3,
+        "k1": 1.2,
+        "b": 0.75
+      },
+      "summary": {
+        "all": {
+          "queries": 12,
+          "recall_at_3": 0.6666666666666666,
+          "mrr_at_3": 0.6666666666666666
+        },
+        "lexical": {
+          "queries": 8,
+          "recall_at_3": 1.0,
+          "mrr_at_3": 1.0
+        },
+        "paraphrase": {
+          "queries": 4,
+          "recall_at_3": 0.0,
+          "mrr_at_3": 0.0
+        }
+      },
+      "queries": [
+        {
+          "id": "q1",
+          "category": "lexical",
+          "query": "checkpoint saved state",
+          "relevant": [
+            "checkpoint"
+          ],
+          "ranked": [
+            "checkpoint"
+          ],
+          "scores": [
+            5.732826334753625
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "latency_ms_runs": [
+            0.009625,
+            0.008458,
+            0.008167,
+            0.007875,
+            0.007625,
+            0.0075,
+            0.007542,
+            0.007667,
+            0.007583,
+            0.0075,
+            0.007459,
+            0.0075,
+            0.007625,
+            0.007541,
+            0.00775,
+            0.007583,
+            0.007334,
+            0.007458,
+            0.007792,
+            0.007542
+          ]
+        },
+        {
+          "id": "q2",
+          "category": "lexical",
+          "query": "retry failed request",
+          "relevant": [
+            "retry"
+          ],
+          "ranked": [
+            "retry",
+            "deduplication",
+            "checkpoint"
+          ],
+          "scores": [
+            5.025536961112704,
+            1.3225526346648029,
+            1.2050890782965475
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "latency_ms_runs": [
+            0.00925,
+            0.009125,
+            0.00875,
+            0.008458,
+            0.0085,
+            0.008584,
+            0.008625,
+            0.008375,
+            0.008416,
+            0.008583,
+            0.008708,
+            0.0085,
+            0.008833,
+            0.008458,
+            0.008625,
+            0.008584,
+            0.008375,
+            0.0085,
+            0.008625,
+            0.0085
+          ]
+        },
+        {
+          "id": "q3",
+          "category": "lexical",
+          "query": "write action approval",
+          "relevant": [
+            "permissions"
+          ],
+          "ranked": [
+            "permissions"
+          ],
+          "scores": [
+            5.736304569394296
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "latency_ms_runs": [
+            0.007917,
+            0.007791,
+            0.007667,
+            0.007375,
+            0.007542,
+            0.0075,
+            0.007459,
+            0.0075,
+            0.007333,
+            0.007042,
+            0.006458,
+            0.006416,
+            0.006625,
+            0.006333,
+            0.006375,
+            0.006375,
+            0.006375,
+            0.006375,
+            0.0065,
+            0.006375
+          ]
+        },
+        {
+          "id": "q4",
+          "category": "lexical",
+          "query": "query lexical search",
+          "relevant": [
+            "retrieval"
+          ],
+          "ranked": [
+            "retrieval"
+          ],
+          "scores": [
+            6.047188208644686
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "latency_ms_runs": [
+            0.007042,
+            0.006708,
+            0.00675,
+            0.006625,
+            0.006708,
+            0.006583,
+            0.006375,
+            0.006458,
+            0.006459,
+            0.006541,
+            0.0065,
+            0.006458,
+            0.0065,
+            0.0065,
+            0.006417,
+            0.006458,
+            0.0065,
+            0.006334,
+            0.006458,
+            0.006625
+          ]
+        },
+        {
+          "id": "q5",
+          "category": "lexical",
+          "query": "token budget",
+          "relevant": [
+            "budget"
+          ],
+          "ranked": [
+            "budget"
+          ],
+          "scores": [
+            4.25542873941663
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "latency_ms_runs": [
+            0.005292,
+            0.005333,
+            0.005125,
+            0.005084,
+            0.005,
+            0.005083,
+            0.005083,
+            0.005042,
+            0.005083,
+            0.005125,
+            0.005042,
+            0.005084,
+            0.005083,
+            0.004959,
+            0.005042,
+            0.005041,
+            0.005,
+            0.005167,
+            0.005,
+            0.005
+          ]
+        },
+        {
+          "id": "q6",
+          "category": "lexical",
+          "query": "cancellation running task",
+          "relevant": [
+            "cancellation"
+          ],
+          "ranked": [
+            "cancellation",
+            "checkpoint",
+            "tracing"
+          ],
+          "scores": [
+            4.389838767887902,
+            1.244774286306376,
+            0.9444616088408515
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "latency_ms_runs": [
+            0.008083,
+            0.007917,
+            0.007875,
+            0.007417,
+            0.007375,
+            0.007459,
+            0.007334,
+            0.007417,
+            0.007458,
+            0.007333,
+            0.0075,
+            0.007292,
+            0.007417,
+            0.007541,
+            0.007375,
+            0.007417,
+            0.007334,
+            0.007375,
+            0.0075,
+            0.007375
+          ]
+        },
+        {
+          "id": "q7",
+          "category": "lexical",
+          "query": "idempotency key",
+          "relevant": [
+            "deduplication"
+          ],
+          "ranked": [
+            "deduplication"
+          ],
+          "scores": [
+            3.6999509617272475
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "latency_ms_runs": [
+            0.005834,
+            0.00575,
+            0.005417,
+            0.005042,
+            0.005083,
+            0.005208,
+            0.005083,
+            0.005,
+            0.005167,
+            0.005167,
+            0.005083,
+            0.005041,
+            0.005083,
+            0.005125,
+            0.005208,
+            0.005084,
+            0.005041,
+            0.005167,
+            0.005083,
+            0.005166
+          ]
+        },
+        {
+          "id": "q8",
+          "category": "lexical",
+          "query": "tracing events timing",
+          "relevant": [
+            "tracing"
+          ],
+          "ranked": [
+            "tracing"
+          ],
+          "scores": [
+            5.375278407684165
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "latency_ms_runs": [
+            0.007042,
+            0.006959,
+            0.006958,
+            0.006667,
+            0.006625,
+            0.006791,
+            0.006667,
+            0.006542,
+            0.006625,
+            0.006584,
+            0.006625,
+            0.006583,
+            0.006458,
+            0.006375,
+            0.006584,
+            0.006542,
+            0.006458,
+            0.006417,
+            0.006459,
+            0.006375
+          ]
+        },
+        {
+          "id": "q9",
+          "category": "paraphrase",
+          "query": "restore progress after crash",
+          "relevant": [
+            "checkpoint"
+          ],
+          "ranked": [],
+          "scores": [],
+          "recall_at_k": 0.0,
+          "reciprocal_rank_at_k": 0.0,
+          "latency_ms_runs": [
+            0.006875,
+            0.006958,
+            0.006709,
+            0.0065,
+            0.006542,
+            0.006583,
+            0.0065,
+            0.006542,
+            0.0065,
+            0.006583,
+            0.006458,
+            0.006541,
+            0.006458,
+            0.006542,
+            0.006458,
+            0.0065,
+            0.006417,
+            0.006583,
+            0.006542,
+            0.006584
+          ]
+        },
+        {
+          "id": "q10",
+          "category": "paraphrase",
+          "query": "avoid duplicate purchases",
+          "relevant": [
+            "deduplication"
+          ],
+          "ranked": [],
+          "scores": [],
+          "recall_at_k": 0.0,
+          "reciprocal_rank_at_k": 0.0,
+          "latency_ms_runs": [
+            0.005875,
+            0.005792,
+            0.005833,
+            0.00575,
+            0.005667,
+            0.005625,
+            0.005542,
+            0.005625,
+            0.005584,
+            0.005625,
+            0.0055,
+            0.005625,
+            0.005583,
+            0.005542,
+            0.005542,
+            0.005625,
+            0.005583,
+            0.005542,
+            0.005583,
+            0.0055
+          ]
+        },
+        {
+          "id": "q11",
+          "category": "paraphrase",
+          "query": "cap expenditure",
+          "relevant": [
+            "budget"
+          ],
+          "ranked": [],
+          "scores": [],
+          "recall_at_k": 0.0,
+          "reciprocal_rank_at_k": 0.0,
+          "latency_ms_runs": [
+            0.004791,
+            0.004792,
+            0.004625,
+            0.004584,
+            0.004416,
+            0.004542,
+            0.004459,
+            0.004458,
+            0.004416,
+            0.004459,
+            0.004542,
+            0.0045,
+            0.004542,
+            0.004541,
+            0.004375,
+            0.0045,
+            0.004459,
+            0.0045,
+            0.004459,
+            0.004458
+          ]
+        },
+        {
+          "id": "q12",
+          "category": "paraphrase",
+          "query": "halt ongoing work",
+          "relevant": [
+            "cancellation"
+          ],
+          "ranked": [],
+          "scores": [],
+          "recall_at_k": 0.0,
+          "reciprocal_rank_at_k": 0.0,
+          "latency_ms_runs": [
+            0.005875,
+            0.005625,
+            0.005708,
+            0.005625,
+            0.0055,
+            0.005459,
+            0.0055,
+            0.005417,
+            0.005417,
+            0.005416,
+            0.005458,
+            0.005458,
+            0.005541,
+            0.005416,
+            0.005416,
+            0.005333,
+            0.0055,
+            0.005459,
+            0.005583,
+            0.005458
+          ]
+        }
+      ]
+    },
+    "bm25_no_length_norm": {
+      "configuration": {
+        "method": "bm25",
+        "k": 3,
+        "k1": 1.2,
+        "b": 0.0
+      },
+      "summary": {
+        "all": {
+          "queries": 12,
+          "recall_at_3": 0.6666666666666666,
+          "mrr_at_3": 0.6666666666666666
+        },
+        "lexical": {
+          "queries": 8,
+          "recall_at_3": 1.0,
+          "mrr_at_3": 1.0
+        },
+        "paraphrase": {
+          "queries": 4,
+          "recall_at_3": 0.0,
+          "mrr_at_3": 0.0
+        }
+      },
+      "queries": [
+        {
+          "id": "q1",
+          "category": "lexical",
+          "query": "checkpoint saved state",
+          "relevant": [
+            "checkpoint"
+          ],
+          "ranked": [
+            "checkpoint"
+          ],
+          "scores": [
+            6.047188208644686
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "latency_ms_runs": [
+            0.007125,
+            0.006875,
+            0.006834,
+            0.006625,
+            0.006458,
+            0.006541,
+            0.006417,
+            0.0065,
+            0.006625,
+            0.006459,
+            0.006458,
+            0.006541,
+            0.006541,
+            0.006541,
+            0.006458,
+            0.006542,
+            0.006375,
+            0.0065,
+            0.006583,
+            0.006542
+          ]
+        },
+        {
+          "id": "q2",
+          "category": "lexical",
+          "query": "retry failed request",
+          "relevant": [
+            "retry"
+          ],
+          "ranked": [
+            "retry",
+            "checkpoint",
+            "deduplication"
+          ],
+          "scores": [
+            5.025536961112704,
+            1.2809338454620642,
+            1.2809338454620642
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "latency_ms_runs": [
+            0.007958,
+            0.007958,
+            0.007667,
+            0.007584,
+            0.007334,
+            0.007417,
+            0.007417,
+            0.007417,
+            0.007417,
+            0.007292,
+            0.007458,
+            0.007458,
+            0.007333,
+            0.007292,
+            0.007334,
+            0.007291,
+            0.007417,
+            0.007375,
+            0.007292,
+            0.007167
+          ]
+        },
+        {
+          "id": "q3",
+          "category": "lexical",
+          "query": "write action approval",
+          "relevant": [
+            "permissions"
+          ],
+          "ranked": [
+            "permissions"
+          ],
+          "scores": [
+            5.375278407684165
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "latency_ms_runs": [
+            0.006792,
+            0.006625,
+            0.006542,
+            0.006459,
+            0.006458,
+            0.006375,
+            0.006333,
+            0.006375,
+            0.006333,
+            0.006417,
+            0.006458,
+            0.006333,
+            0.006333,
+            0.006292,
+            0.006292,
+            0.006417,
+            0.006459,
+            0.006625,
+            0.0065,
+            0.006458
+          ]
+        },
+        {
+          "id": "q4",
+          "category": "lexical",
+          "query": "query lexical search",
+          "relevant": [
+            "retrieval"
+          ],
+          "ranked": [
+            "retrieval"
+          ],
+          "scores": [
+            6.047188208644686
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "latency_ms_runs": [
+            0.006958,
+            0.006958,
+            0.006667,
+            0.006709,
+            0.006583,
+            0.006708,
+            0.006625,
+            0.006541,
+            0.006541,
+            0.006625,
+            0.00675,
+            0.009666,
+            0.007166,
+            0.006667,
+            0.006625,
+            0.006666,
+            0.006625,
+            0.006625,
+            0.006625,
+            0.006541
+          ]
+        },
+        {
+          "id": "q5",
+          "category": "lexical",
+          "query": "token budget",
+          "relevant": [
+            "budget"
+          ],
+          "ranked": [
+            "budget"
+          ],
+          "scores": [
+            4.25542873941663
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "latency_ms_runs": [
+            0.005417,
+            0.005375,
+            0.005416,
+            0.005375,
+            0.005166,
+            0.00525,
+            0.005333,
+            0.005208,
+            0.005042,
+            0.005083,
+            0.005083,
+            0.005125,
+            0.005,
+            0.005,
+            0.005166,
+            0.004958,
+            0.005084,
+            0.004959,
+            0.005041,
+            0.005166
+          ]
+        },
+        {
+          "id": "q6",
+          "category": "lexical",
+          "query": "cancellation running task",
+          "relevant": [
+            "cancellation"
+          ],
+          "ranked": [
+            "cancellation",
+            "checkpoint",
+            "tracing"
+          ],
+          "scores": [
+            4.527980547296961,
+            1.2986347121561708,
+            0.9444616088408515
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "latency_ms_runs": [
+            0.008125,
+            0.008167,
+            0.007667,
+            0.007625,
+            0.007667,
+            0.007625,
+            0.007708,
+            0.007541,
+            0.0075,
+            0.007459,
+            0.007459,
+            0.007459,
+            0.007625,
+            0.0075,
+            0.007542,
+            0.0075,
+            0.007375,
+            0.007459,
+            0.0075,
+            0.007417
+          ]
+        },
+        {
+          "id": "q7",
+          "category": "lexical",
+          "query": "idempotency key",
+          "relevant": [
+            "deduplication"
+          ],
+          "ranked": [
+            "deduplication"
+          ],
+          "scores": [
+            3.58351893845611
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "latency_ms_runs": [
+            0.005666,
+            0.00575,
+            0.005416,
+            0.005333,
+            0.005334,
+            0.005166,
+            0.005208,
+            0.005125,
+            0.005125,
+            0.005208,
+            0.005209,
+            0.005167,
+            0.005458,
+            0.005125,
+            0.005166,
+            0.005125,
+            0.005125,
+            0.005125,
+            0.005208,
+            0.005208
+          ]
+        },
+        {
+          "id": "q8",
+          "category": "lexical",
+          "query": "tracing events timing",
+          "relevant": [
+            "tracing"
+          ],
+          "ranked": [
+            "tracing"
+          ],
+          "scores": [
+            5.375278407684165
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "latency_ms_runs": [
+            0.007084,
+            0.007,
+            0.006834,
+            0.006792,
+            0.006625,
+            0.006542,
+            0.006542,
+            0.006542,
+            0.0065,
+            0.006542,
+            0.006458,
+            0.0065,
+            0.006416,
+            0.006541,
+            0.006541,
+            0.006583,
+            0.006542,
+            0.006583,
+            0.006542,
+            0.006542
+          ]
+        },
+        {
+          "id": "q9",
+          "category": "paraphrase",
+          "query": "restore progress after crash",
+          "relevant": [
+            "checkpoint"
+          ],
+          "ranked": [],
+          "scores": [],
+          "recall_at_k": 0.0,
+          "reciprocal_rank_at_k": 0.0,
+          "latency_ms_runs": [
+            0.006834,
+            0.006792,
+            0.006666,
+            0.006791,
+            0.006666,
+            0.006667,
+            0.006542,
+            0.006541,
+            0.006541,
+            0.006458,
+            0.006542,
+            0.0065,
+            0.006708,
+            0.006667,
+            0.006709,
+            0.006666,
+            0.006666,
+            0.006583,
+            0.006583,
+            0.006584
+          ]
+        },
+        {
+          "id": "q10",
+          "category": "paraphrase",
+          "query": "avoid duplicate purchases",
+          "relevant": [
+            "deduplication"
+          ],
+          "ranked": [],
+          "scores": [],
+          "recall_at_k": 0.0,
+          "reciprocal_rank_at_k": 0.0,
+          "latency_ms_runs": [
+            0.005916,
+            0.005875,
+            0.005834,
+            0.00575,
+            0.005709,
+            0.005583,
+            0.005625,
+            0.005541,
+            0.005542,
+            0.005584,
+            0.005625,
+            0.005541,
+            0.005583,
+            0.005458,
+            0.005583,
+            0.005541,
+            0.005542,
+            0.005542,
+            0.005583,
+            0.005584
+          ]
+        },
+        {
+          "id": "q11",
+          "category": "paraphrase",
+          "query": "cap expenditure",
+          "relevant": [
+            "budget"
+          ],
+          "ranked": [],
+          "scores": [],
+          "recall_at_k": 0.0,
+          "reciprocal_rank_at_k": 0.0,
+          "latency_ms_runs": [
+            0.004792,
+            0.004667,
+            0.004667,
+            0.0045,
+            0.004459,
+            0.004458,
+            0.0045,
+            0.004417,
+            0.004375,
+            0.004416,
+            0.004458,
+            0.0045,
+            0.004541,
+            0.004542,
+            0.004458,
+            0.004416,
+            0.004416,
+            0.004334,
+            0.004375,
+            0.0045
+          ]
+        },
+        {
+          "id": "q12",
+          "category": "paraphrase",
+          "query": "halt ongoing work",
+          "relevant": [
+            "cancellation"
+          ],
+          "ranked": [],
+          "scores": [],
+          "recall_at_k": 0.0,
+          "reciprocal_rank_at_k": 0.0,
+          "latency_ms_runs": [
+            0.005916,
+            0.005833,
+            0.005667,
+            0.005583,
+            0.0055,
+            0.005542,
+            0.005542,
+            0.005375,
+            0.0055,
+            0.005542,
+            0.005458,
+            0.005334,
+            0.005417,
+            0.005292,
+            0.005458,
+            0.005458,
+            0.005375,
+            0.005416,
+            0.005416,
+            0.005458
+          ]
+        }
+      ]
+    }
+  }
+}
