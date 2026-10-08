@@ -1,6 +1,6 @@
 # Principle tracks
 
-MASTER mechanisms; PRACTICE tools only where evidence justifies them. All tracks are planned; evidence: —. Create individual track directories when work begins.
+MASTER mechanisms; PRACTICE tools only where evidence justifies them. The first [lexical retrieval diagnostic](../experiments/2026-09-lexical-retrieval-baseline/README.md) supplies initial implementation and measurement evidence for RAG and evaluation. Owner understanding is not yet demonstrated; other tracks remain planned. Create individual track directories when work begins.
 
 | Track | Concepts / milestone direction |
 |---|---|
