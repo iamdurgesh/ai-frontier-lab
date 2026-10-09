@@ -46,3 +46,36 @@ def test_invalid_search_parameters(kwargs):
 def test_duplicate_ids_rejected():
     with pytest.raises(ValueError):
         Retriever([{"id": "a", "text": "cat"}, {"id": "a", "text": "dog"}])
+
+
+def test_runner_reproducibility_and_existing_output_refusal(tmp_path):
+    import json
+    import subprocess
+    import sys
+    from pathlib import Path
+
+    script = Path(__file__).with_name("run.py")
+    artifacts = []
+    for name in ("first.json", "second.json"):
+        output = tmp_path / name
+        subprocess.run(
+            [sys.executable, str(script), "--output", str(output)],
+            check=True,
+            capture_output=True,
+            timeout=60,
+        )
+        artifacts.append(json.loads(output.read_text()))
+    assert artifacts[0]["sha256"] == artifacts[1]["sha256"]
+    for method, result in artifacts[0]["results"].items():
+        other = artifacts[1]["results"][method]
+        assert result["summary"] == other["summary"]
+        assert [q["ranked"] for q in result["queries"]] == [q["ranked"] for q in other["queries"]]
+    existing = tmp_path / "first.json"
+    before = existing.read_bytes()
+    refused = subprocess.run(
+        [sys.executable, str(script), "--output", str(existing)],
+        capture_output=True,
+        timeout=60,
+    )
+    assert refused.returncode != 0
+    assert existing.read_bytes() == before
