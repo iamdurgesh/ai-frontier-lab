@@ -1,12 +1,20 @@
 # Roadmap
 
-Phases are evidence gates, not calendar promises or mandatory tool checklists. Evaluation, privacy, security, observability, and cost control begin with the first experiment. All learning work below is planned.
+Phases are evidence gates, not calendar promises or mandatory tool checklists. Evaluation, privacy, security, observability, and cost control begin with the first experiment. Most learning work below is planned; the first lexical retrieval diagnostic is active.
+
+## Progress and learning discipline
+
+The core goal is demonstrated engineering ability and useful systems. The distributed recursive reasoning framework is a major integration destination; use the [architecture evidence requirements](ARCHITECTURE.md#evidence-required-for-an-advance) to judge proposed advances.
+
+For each learning cycle: define one question → implement the simplest baseline → make one deliberate change → measure and stress it → explain the result → record a decision. Set a finite budget and finish the evidence record before expanding scope. Update SKILLS.md only with linked evidence; a failed hypothesis can still demonstrate understanding.
+
+Bootstrap tooling exists locally. The [lexical retrieval diagnostic](experiments/2026-09-lexical-retrieval-baseline/README.md) has an implementation and measured results; owner understanding review is pending. No integrated project has been completed. Local checks, committed files, and remote validation must be reported separately.
 
 ## Phase 0 — Bootstrap
 
 - Goal: Package, templates, CI, experiment lifecycle.
 - Artifact: Usable repository.
-- Exit evidence: Setup, tests, lint, format, typing and temporary generation pass.
+- Exit evidence: Setup, tests, lint, format, typing and temporary generation pass. All required files are committed and setup works from a clean checkout. Verify remote CI after an explicitly approved push; local success alone does not establish remote readiness.
 
 ## Phase 1 — Retrieval + RAG
 
@@ -73,4 +81,4 @@ Phases are evidence gates, not calendar promises or mandatory tool checklists. E
 - [ ] Evals/context: golden dataset; deterministic grader; secondary LLM judge; context selection; context-size measurement; Langfuse or equivalent tracing.
 - [ ] MCP: local server; safe read-only tool; resource; client; approved write test; threat model; compatible client integration. A2A follows MCP understanding.
 
-First proposed experiment: `2026-09-hybrid-search-baseline`. Not created or executed during bootstrap. Set data, time, request/token, spending and resource budgets before starting. Each claim of mastery requires mechanism explanation, a predicted/reproduced failure, a deliberate modification, and honest assistance disclosure.
+First active experiment: [2026-09-lexical-retrieval-baseline](experiments/2026-09-lexical-retrieval-baseline/README.md), the sparse first step toward the hybrid-search comparison. Dense retrieval, Qdrant, and reranking remain deferred. Set data, time, request/token, spending and resource budgets before starting. Each claim of mastery requires mechanism explanation, a predicted/reproduced failure, a deliberate modification, and honest assistance disclosure.
