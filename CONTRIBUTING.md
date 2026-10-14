@@ -6,6 +6,8 @@ Create a focused branch and a single-hypothesis experiment with `uv run python s
 
 Run `uv run pytest`, `uv run ruff check .`, `uv run ruff format --check .`, and `uv run mypy`. Optional local hooks: `uv run pre-commit install`; run all hooks with `uv run pre-commit run --all-files`. Hooks use the locked root environment.
 
+Before proposing publication, check that required files are tracked and the documented setup works from a clean checkout. Report local checks and remote CI separately. Always ask the owner and wait for explicit confirmation before pushing; state the destination and changes. A feasibility question is not authorization to commit or push.
+
 Use small commits such as `chore(repo): bootstrap frontier lab` or `exp(rag): compare retrieval baselines`. PRs describe behavior, evidence, validation, and limitations. A completed experiment has reproducible code, measured results, conclusion, and a justified radar decision.
 
 Root runtime dependencies: pydantic provides masked credential values; pydantic-settings loads optional configuration. Hatchling builds the src package. pytest tests bootstrap behavior; Ruff handles lint/format/import order; mypy checks reusable code; pre-commit runs the same local checks. No HTTP client, agent SDK, CLI framework, async test plugin, or service client is needed yet. Versions resolve into uv.lock; update deliberately and rerun checks.

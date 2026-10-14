@@ -1,0 +1,14 @@
+# Reference for run.py's fixed diagnostic; the runner does not load YAML.
+name: lexical-retrieval-baseline
+status: running
+fixture: fixture.json
+k: 3
+k1: 1.2
+b: 0.75
+ablation_b: 0.0
+warmup_per_query: 1
+repeats: 20
+concurrency: 1
+api_requests: 0
+api_cost_eur: 0
+external_calls_allowed: false
