@@ -1,0 +1,14 @@
+# Documentation only; no runner is implemented. null means unset, never unlimited.
+name: "<name>"
+date: "<date>"
+status: planned
+seed: null
+dataset: null
+model: null
+budgets:
+  time_seconds: null
+  requests: null
+  tokens: null
+  cost_eur: null
+  memory_mb: null
+external_calls_allowed: false
