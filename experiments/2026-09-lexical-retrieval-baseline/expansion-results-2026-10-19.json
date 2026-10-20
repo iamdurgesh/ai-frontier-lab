@@ -1,0 +1,96 @@
+{
+  "source_sha256": {
+    "expansion.py": "ae7c967007ee957a71c75d0e7a73a50f549bc07529a57ca894832f883bec88c6",
+    "retrieval.py": "da9cab1dd03d6cf0a98660c9384050966edcfbed809fa31c911aa1cbf03e5ccb"
+  },
+  "configuration": {
+    "k": 1,
+    "k1": 1.2,
+    "b": 0.75,
+    "expansions": {
+      "restore": [
+        "checkpoint"
+      ],
+      "resume": [
+        "checkpoint"
+      ]
+    }
+  },
+  "documents": [
+    {
+      "id": "checkpoint",
+      "text": "checkpoint"
+    },
+    {
+      "id": "career",
+      "text": "resume developer experience skills education"
+    }
+  ],
+  "limitations": "Co-designed synthetic diagnostic; no held-out quality claim or timing.",
+  "api_requests": 0,
+  "results": [
+    {
+      "case": "recovery",
+      "variant": "baseline",
+      "query": "restore",
+      "effective_query": "restore",
+      "relevant": [
+        "checkpoint"
+      ],
+      "hits": [],
+      "recall_at_k": 0.0,
+      "reciprocal_rank_at_k": 0.0
+    },
+    {
+      "case": "recovery",
+      "variant": "expanded",
+      "query": "restore",
+      "effective_query": "restore checkpoint",
+      "relevant": [
+        "checkpoint"
+      ],
+      "hits": [
+        [
+          "checkpoint",
+          0.9530773732699247
+        ]
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank_at_k": 1.0
+    },
+    {
+      "case": "ambiguous",
+      "variant": "baseline",
+      "query": "resume",
+      "effective_query": "resume",
+      "relevant": [
+        "career"
+      ],
+      "hits": [
+        [
+          "career",
+          0.5446156418685285
+        ]
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank_at_k": 1.0
+    },
+    {
+      "case": "ambiguous",
+      "variant": "expanded",
+      "query": "resume",
+      "effective_query": "resume checkpoint",
+      "relevant": [
+        "career"
+      ],
+      "hits": [
+        [
+          "checkpoint",
+          0.9530773732699247
+        ]
+      ],
+      "recall_at_k": 0.0,
+      "reciprocal_rank_at_k": 0.0
+    }
+  ]
+}
