@@ -120,3 +120,7 @@ ASSESS: no framework, model, or retrieval service adopted from this diagnostic.
 ## Official references
 
 Reviewed 2026-09-29: [Introduction to Information Retrieval — Okapi BM25](https://nlp.stanford.edu/IR-book/html/htmledition/okapi-bm25-a-non-binary-model-1.html), by Manning, Raghavan and Schütze. The local formula above specifies the exact positive-IDF variant used.
+
+## Deliberate-modification follow-up
+
+[Controlled query expansion](QUERY_EXPANSION.md) adds a runnable improvement/regression diagnostic with measured evidence. It preserves the original baseline and historical results. Owner understanding review remains pending.
