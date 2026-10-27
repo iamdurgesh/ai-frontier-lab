@@ -124,3 +124,5 @@ Reviewed 2026-09-29: [Introduction to Information Retrieval — Okapi BM25](http
 ## Deliberate-modification follow-up
 
 [Controlled query expansion](QUERY_EXPANSION.md) adds a runnable improvement/regression diagnostic with measured evidence. It preserves the original baseline and historical results. Owner understanding review remains pending.
+
+[Expansion-policy comparison](EXPANSION_POLICY.md) tests an empty-result fallback against unconditional expansion, including a wrong-nonempty-result failure.

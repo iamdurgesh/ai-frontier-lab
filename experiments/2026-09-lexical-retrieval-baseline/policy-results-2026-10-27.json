@@ -1,0 +1,191 @@
+{
+  "source_sha256": {
+    "retrieval.py": "da9cab1dd03d6cf0a98660c9384050966edcfbed809fa31c911aa1cbf03e5ccb",
+    "expansion.py": "ae7c967007ee957a71c75d0e7a73a50f549bc07529a57ca894832f883bec88c6",
+    "expansion_policy.py": "c495050d166a229afd5555b09911a6fbc1a93c47b3e9d6910aab7b6d64e75196"
+  },
+  "configuration": {
+    "k": 1,
+    "k1": 1.2,
+    "b": 0.75,
+    "expansions": {
+      "restore": [
+        "checkpoint"
+      ],
+      "resume": [
+        "checkpoint"
+      ]
+    }
+  },
+  "documents": [
+    {
+      "id": "checkpoint",
+      "text": "checkpoint"
+    },
+    {
+      "id": "career",
+      "text": "resume developer experience skills education"
+    }
+  ],
+  "limitations": "Co-designed synthetic diagnostic; labels are explicit intended meanings.",
+  "api_requests": 0,
+  "results": [
+    {
+      "case": "lexical_miss",
+      "query": "restore",
+      "relevant": [
+        "checkpoint"
+      ],
+      "policy": "never",
+      "effective_query": "restore",
+      "search_calls": 1,
+      "hits": [],
+      "recall_at_k": 0.0,
+      "reciprocal_rank_at_k": 0.0
+    },
+    {
+      "case": "lexical_miss",
+      "query": "restore",
+      "relevant": [
+        "checkpoint"
+      ],
+      "policy": "always",
+      "effective_query": "restore checkpoint",
+      "search_calls": 1,
+      "hits": [
+        [
+          "checkpoint",
+          0.9530773732699247
+        ]
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank_at_k": 1.0
+    },
+    {
+      "case": "lexical_miss",
+      "query": "restore",
+      "relevant": [
+        "checkpoint"
+      ],
+      "policy": "on_empty",
+      "effective_query": "restore checkpoint",
+      "search_calls": 2,
+      "hits": [
+        [
+          "checkpoint",
+          0.9530773732699247
+        ]
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank_at_k": 1.0
+    },
+    {
+      "case": "ambiguous_term",
+      "query": "resume",
+      "relevant": [
+        "career"
+      ],
+      "policy": "never",
+      "effective_query": "resume",
+      "search_calls": 1,
+      "hits": [
+        [
+          "career",
+          0.5446156418685285
+        ]
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank_at_k": 1.0
+    },
+    {
+      "case": "ambiguous_term",
+      "query": "resume",
+      "relevant": [
+        "career"
+      ],
+      "policy": "always",
+      "effective_query": "resume checkpoint",
+      "search_calls": 1,
+      "hits": [
+        [
+          "checkpoint",
+          0.9530773732699247
+        ]
+      ],
+      "recall_at_k": 0.0,
+      "reciprocal_rank_at_k": 0.0
+    },
+    {
+      "case": "ambiguous_term",
+      "query": "resume",
+      "relevant": [
+        "career"
+      ],
+      "policy": "on_empty",
+      "effective_query": "resume",
+      "search_calls": 1,
+      "hits": [
+        [
+          "career",
+          0.5446156418685285
+        ]
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank_at_k": 1.0
+    },
+    {
+      "case": "nonempty_wrong_hit",
+      "query": "restore resume",
+      "relevant": [
+        "checkpoint"
+      ],
+      "policy": "never",
+      "effective_query": "restore resume",
+      "search_calls": 1,
+      "hits": [
+        [
+          "career",
+          0.5446156418685285
+        ]
+      ],
+      "recall_at_k": 0.0,
+      "reciprocal_rank_at_k": 0.0
+    },
+    {
+      "case": "nonempty_wrong_hit",
+      "query": "restore resume",
+      "relevant": [
+        "checkpoint"
+      ],
+      "policy": "always",
+      "effective_query": "restore resume checkpoint",
+      "search_calls": 1,
+      "hits": [
+        [
+          "checkpoint",
+          0.9530773732699247
+        ]
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank_at_k": 1.0
+    },
+    {
+      "case": "nonempty_wrong_hit",
+      "query": "restore resume",
+      "relevant": [
+        "checkpoint"
+      ],
+      "policy": "on_empty",
+      "effective_query": "restore resume",
+      "search_calls": 1,
+      "hits": [
+        [
+          "career",
+          0.5446156418685285
+        ]
+      ],
+      "recall_at_k": 0.0,
+      "reciprocal_rank_at_k": 0.0
+    }
+  ]
+}
